@@ -1,0 +1,110 @@
+[
+  {
+    "ID": 381,
+    "Name": "Acquisition R1.3.0",
+    "Type": "LEADERSHIPCORE",
+    "Domain": "Acquisition_process",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "25/11/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 366,
+    "Name": "Acquisition R1.2.0",
+    "Type": "LEADERSHIPCORE",
+    "Domain": "Acquisition_process",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "29/04/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 57,
+    "Name": "Technical_Acquisition EN R1.0.0",
+    "Type": "CORE",
+    "Domain": "Acquisition_process",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "29/12/2014",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 50,
+    "Name": "Technical_Acquisition BSL0.0.3",
+    "Type": "CORE",
+    "Domain": "Acquisition_process",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "18/11/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 389,
+    "Name": "Manufacturing Standardization R1.0.0",
+    "Type": "SUPPORT",
+    "Domain": "AE/TEF",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "25/11/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 390,
+    "Name": "MAE supplier strategy R1.0.0",
+    "Type": "SUPPORT",
+    "Domain": "AE/TEF1",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "25/11/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 391,
+    "Name": "ECU Testing R1.0.0",
+    "Type": "SUPPORT",
+    "Domain": "AE/TEF7",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "25/11/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 392,
+    "Name": "MAE design R1.0.0",
+    "Type": "CORE",
+    "Domain": "AE/TEF8",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "25/11/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 370,
+    "Name": "Manufacturing Technology Engineering R3.6.0",
+    "Type": "SUPPORT",
+    "Domain": "AIT(Assembly and interconnect Technology)",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "29/04/2021",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 345,
+    "Name": "Business Unit Knowledge Base R3.1.0",
+    "Type": "SUPPORT",
+    "Domain": "Business Unit Knowledge Base",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "29/05/2020",
+    "Userview": "Userview-EN,DE"
+  },
+  {
+    "ID": 374,
+    "Name": "Quality Management R3.5.0",
+    "Type": "SUPPORT",
+    "Domain": "Quality Management",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "29/04/2021",
+    "Userview": "Userview-EN,DE"
+  },
+  {
+    "ID": 226,
+    "Name": "Project Life Cycle Platform R2.5.0",
+    "Type": "CORE",
+    "Domain": "PLC Platform",
+    "CreatedOn": "09/10/2021",
+    "ReleasedOn": "22/12/2017",
+    "Userview": "Userview-EN"
+  }
+]

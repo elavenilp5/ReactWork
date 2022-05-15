@@ -1,0 +1,110 @@
+[
+  {
+    "ID": 401,
+    "Name": "Acquisition WD1.4.0",
+    "Type": "LEADERSHIPCORE",
+    "Domain": "Acquisition_process",
+    "CreatedOn": "25/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 413,
+    "Name": "Manufacturing Standardization WD2.0.0",
+    "Type": "SUPPORT",
+    "Domain": "AE/TEF",
+    "CreatedOn": "22/02/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 400,
+    "Name": "Manufacturing Testing Technology Engineering WD1.1.0",
+    "Type": "SUPPORT",
+    "Domain": "AE/TEF7",
+    "CreatedOn": "21/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 402,
+    "Name": "MAE desing WD1.1.0",
+    "Type": "CORE",
+    "Domain": "AE/TEF8",
+    "CreatedOn": "25/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 419,
+    "Name": "Engineering Review WD3.6.0",
+    "Type": "SUPPORT",
+    "Domain": "Engineering Review",
+    "CreatedOn": "06/04/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN,DE"
+  },
+  {
+    "ID": 420,
+    "Name": "Hardware Engineering WD3.7.0",
+    "Type": "VMODEL",
+    "Domain": "HW Engineering",
+    "CreatedOn": "12/04/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 399,
+    "Name": "Improvement Procedure WD3.6.",
+    "Type": "CORE",
+    "Domain": "Improvement Process",
+    "CreatedOn": "17/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 412,
+    "Name": "Innovation WD3.3.0",
+    "Type": "LEADERSHIPCORE",
+    "Domain": "Innovation Management",
+    "CreatedOn": "11/02/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 398,
+    "Name": "WD_test_PCR_IE_25Nov2021",
+    "Type": "LEADERSHIP",
+    "Domain": "Innovation Management",
+    "CreatedOn": "26/11/2021",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN,DE"
+  },
+  {
+    "ID": 406,
+    "Name": "Knowledge and Method Engineering WD3.3.0",
+    "Type": "CORE",
+    "Domain": "Knowledge and Method Engineering EN",
+    "CreatedOn": "25/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN,DE"
+  },
+  {
+    "ID": 408,
+    "Name": "Mechanical Engineering",
+    "Type": "VMODEL",
+    "Domain": "ME Engineering",
+    "CreatedOn": "25/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  },
+  {
+    "ID": 410,
+    "Name": "Software Engineering WD3.7.0",
+    "Type": "VMODEL",
+    "Domain": "SW Engineering",
+    "CreatedOn": "25/01/2022",
+    "ReleasedOn": "",
+    "Userview": "Userview-EN"
+  }
+]

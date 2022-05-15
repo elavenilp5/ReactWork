@@ -1,8 +1,99 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.headerdiv {
+  background-color: #215f8b;
+  color: white;
+  height: 70px;
+  width: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logodiv {
+  /* float: right;
+  height: 70px;
+  width: 40px; */
+  float: right;
+  background-color: white;
+  width: fit-content;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: fit-content;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  /* margin-right: 70px; */
 }
 
-.App-logo {
+.logoimg {
+  height: 60px;
+  width: 150px;
+}
+
+.screenHead {
+  margin-top: 8px;
+  float: left;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.nav {
+  float: right;
+  margin-left: 1000px;
+}
+.tablediv {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+table,
+td,
+th {
+  border: 1px solid;
+  padding: 8px;
+}
+th {
+  background-color: #215f8b;
+  color: #ffffff;
+  text-align: center;
+}
+td {
+  text-align: start;
+  font-size: 12px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.searchbardiv {
+  float: right;
+}
+.footer {
+  margin-top: 10px;
+  float: right;
+  gap: 10px;
+  margin-right: 20px;
+}
+.b1 {
+  margin-right: 10px;
+}
+.b2 {
+  margin-right: 10px;
+}
+.b3 {
+  margin-right: 10px;
+}
+.button {
+  background-color: #215f8b;
+  color: white;
+  text-align: center;
+  border: none;
+}
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +126,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
