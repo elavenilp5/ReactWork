@@ -1,41 +1,22 @@
-import React, { useMemo, useState } from "react"
-import { useTable, useGlobalFilter, useSortBy, useRowSelect } from "react-table"
-import WorkingDraft from "./WorkingDraft.json"
+import React, { useMemo } from "react"
+import { useTable, useGlobalFilter, useSortBy } from "react-table"
+import Baselines from "./Baselines.json"
 import { COLUMNS } from "./columns"
 import Searchbar from "./Searchbar"
-import DraftFooter from "./DraftFooter"
+import BaselineFooter from "./BaselineFooter"
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp"
-import Modal from "react-modal"
 
-export default function DraftTable() {
-  const [modalIsOpen, setModalIsOpen] = useState(false)
+export default function BaselineTable() {
   const columns = useMemo(() => COLUMNS, [])
-  const data = useMemo(() => WorkingDraft, [])
+  const data = useMemo(() => Baselines, [])
   const tableInstance = useTable(
     {
       columns,
       data,
     },
     useGlobalFilter,
-    useSortBy,
-    useRowSelect
-    // (hooks) => {
-    //   hooks.visibleColumns.push((columns) => {
-    //     return [
-    //       {
-    //         id: "selection",
-    //         Header: ({ getToggleAllRowsSelectedProps }) => (
-    //           <Checkbox {...getToggleAllRowsSelectedProps()} />
-    //         ),
-    //         cell: ({ row }) => (
-    //           <Checkbox {...row.getToggleRowSelectedProps()} />
-    //         ),
-    //       },
-    //       ...columns,
-    //     ];
-    //   });
-    // }
+    useSortBy
   )
 
   const {
@@ -46,7 +27,6 @@ export default function DraftTable() {
     prepareRow,
     state,
     setGlobalFilter,
-    selectedFlatRows,
   } = tableInstance
 
   const { globalFilter } = state
@@ -85,15 +65,14 @@ export default function DraftTable() {
                   return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
                 })}
                 <td>
-                  <a
-                    style={{ cursor: "pointer", color: "blue" }}
-                    onClick={() => setModalIsOpen(row, true)}
-                  >
-                    Edit
-                  </a>
+                  <a style={{ cursor: "pointer", color: "blue" }}>Edit</a>
                 </td>
                 <td>
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    disabled={true}
+                    style={{ cursor: "not-allowed" }}
+                  />
                 </td>
               </tr>
             )
@@ -101,11 +80,7 @@ export default function DraftTable() {
         </tbody>
       </table>
       <h4 style={{ float: "left" }}>Showing 1 to 10 of 10 entries</h4>
-      <DraftFooter />
-      <Modal isOpen={modalIsOpen}>
-        <h2>Hello</h2>
-        <button onClick={() => setModalIsOpen(false)}>x</button>
-      </Modal>
+      <BaselineFooter />
     </div>
   )
 }

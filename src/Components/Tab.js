@@ -4,6 +4,9 @@ import { Tabs } from "antd"
 import TableBaseline from "./TableBaseline"
 import TableDraft from "./TableDraft"
 import TableArchived from "./TableArchived"
+import DraftTable from "./DraftTable"
+import BaseLineTable from "./BaselineTable"
+import BaselineTable from "./BaselineTable"
 
 const { TabPane } = Tabs
 
@@ -20,10 +23,10 @@ export default function Tab() {
     >
       <Tabs>
         <TabPane tab="Baselines" key="1">
-          <TableBaseline />
+          <BaselineTable />
         </TabPane>
         <TabPane tab="Working Draft" key="2">
-          <TableDraft />
+          <DraftTable />
         </TabPane>
         <TabPane tab="Archived" key="3">
           <TableArchived />
