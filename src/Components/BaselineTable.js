@@ -1,11 +1,9 @@
-import React, { useMemo } from "react"
+import React, { useMemo, useState } from "react"
 import { useTable, useGlobalFilter, useSortBy } from "react-table"
 import Baselines from "./Baselines.json"
 import { COLUMNS } from "./columns"
 import Searchbar from "./Searchbar"
 import BaselineFooter from "./BaselineFooter"
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp"
 
 export default function BaselineTable() {
   const columns = useMemo(() => COLUMNS, [])
@@ -79,6 +77,7 @@ export default function BaselineTable() {
           })}
         </tbody>
       </table>
+
       <h4 style={{ float: "left" }}>Showing 1 to 10 of 10 entries</h4>
       <BaselineFooter />
     </div>

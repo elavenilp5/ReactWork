@@ -6,6 +6,8 @@ function Searchbar({ filter, setFilter }) {
       <label for="search">Search: &nbsp;</label>
 
       <input
+        data-testid="searchbox"
+        placeholder="search"
         type="text"
         id="serach"
         name="search"

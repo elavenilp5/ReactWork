@@ -93,6 +93,19 @@ table {
   text-align: center;
   border: none;
 }
+.editfooter {
+  margin-top: 50px;
+}
+.editheader {
+  color: white;
+  background-color: #215f8b;
+  padding: 5px;
+}
+.edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

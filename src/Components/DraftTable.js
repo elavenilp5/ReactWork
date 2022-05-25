@@ -4,12 +4,16 @@ import WorkingDraft from "./WorkingDraft.json"
 import { COLUMNS } from "./columns"
 import Searchbar from "./Searchbar"
 import DraftFooter from "./DraftFooter"
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp"
 import Modal from "react-modal"
-
+import { Checkbox } from "./Checkbox"
 export default function DraftTable() {
+  const [header, setheader] = useState("")
   const [modalIsOpen, setModalIsOpen] = useState(false)
+  function myfunction(row) {
+    setheader(row.original.Name)
+    console.log(row)
+    setModalIsOpen(true)
+  }
   const columns = useMemo(() => COLUMNS, [])
   const data = useMemo(() => WorkingDraft, [])
   const tableInstance = useTable(
@@ -19,23 +23,23 @@ export default function DraftTable() {
     },
     useGlobalFilter,
     useSortBy,
-    useRowSelect
-    // (hooks) => {
-    //   hooks.visibleColumns.push((columns) => {
-    //     return [
-    //       {
-    //         id: "selection",
-    //         Header: ({ getToggleAllRowsSelectedProps }) => (
-    //           <Checkbox {...getToggleAllRowsSelectedProps()} />
-    //         ),
-    //         cell: ({ row }) => (
-    //           <Checkbox {...row.getToggleRowSelectedProps()} />
-    //         ),
-    //       },
-    //       ...columns,
-    //     ];
-    //   });
-    // }
+    useRowSelect,
+    (hooks) => {
+      hooks.visibleColumns.push((columns) => {
+        return [
+          ...columns,
+          {
+            id: "selection",
+            Header: ({ getToggleAllRowsSelectedProps }) => (
+              <Checkbox {...getToggleAllRowsSelectedProps()} />
+            ),
+            Cell: ({ row }) => (
+              <Checkbox {...row.getToggleRowSelectedProps()} />
+            ),
+          },
+        ]
+      })
+    }
   )
 
   const {
@@ -70,9 +74,9 @@ export default function DraftTable() {
                 </th>
               ))}
               <th></th>
-              <th>
+              {/* <th>
                 <input type="checkbox" />
-              </th>
+              </th> */}
             </tr>
           ))}
         </thead>
@@ -87,14 +91,14 @@ export default function DraftTable() {
                 <td>
                   <a
                     style={{ cursor: "pointer", color: "blue" }}
-                    onClick={() => setModalIsOpen(row, true)}
+                    onClick={() => myfunction(row)}
                   >
                     Edit
                   </a>
                 </td>
-                <td>
+                {/* <td>
                   <input type="checkbox" />
-                </td>
+                </td> */}
               </tr>
             )
           })}
@@ -102,9 +106,63 @@ export default function DraftTable() {
       </table>
       <h4 style={{ float: "left" }}>Showing 1 to 10 of 10 entries</h4>
       <DraftFooter />
-      <Modal isOpen={modalIsOpen}>
-        <h2>Hello</h2>
-        <button onClick={() => setModalIsOpen(false)}>x</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        style={{
+          overlay: {},
+          content: {
+            left: "20%",
+            top: "20%",
+            right: "20%",
+            bottom: "20%",
+            minHeight: "200px",
+            minWidth: "650px",
+            position: "absolute",
+          },
+        }}
+      >
+        <div className="edit">
+          <div className="editheader">{header}</div>
+          <div className="editbody">
+            <h5>Process Type:</h5>
+            <select name="process_type" className="process_select">
+              <option>Leadership Process</option>
+              <option>LEADERSHIPCORE Process</option>
+              <option>Core Process</option>
+              <option>VMODEL</option>
+              <option>LEADVMODEL</option>
+              <option>Support Process</option>
+            </select>
+
+            <h5>Domain Mapping:</h5>
+            <select name="domain_mapping" className="domain_select">
+              <option>NONE</option>
+              <option>Acquisition_Process</option>
+              <option>AE/TEF</option>
+              <option>Business Unit Knowledge Base</option>
+              <option>Component PCB Connection</option>
+              <option>Configuration Management</option>
+            </select>
+
+            <h5>Release Notes</h5>
+            <div>
+              <input type="file" name="file" />
+              <button>Upload</button>
+            </div>
+
+            <h5>Image</h5>
+            <div>
+              <input type="file" name="file" />
+              <button>Upload</button>
+            </div>
+          </div>
+
+          <div className="editfooter">
+            <button onClick={() => setModalIsOpen(false)}>Close</button>
+            <button>Save</button>
+          </div>
+        </div>
       </Modal>
     </div>
   )
