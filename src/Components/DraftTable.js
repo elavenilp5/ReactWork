@@ -55,7 +55,7 @@ export default function DraftTable() {
 
   const { globalFilter } = state
   return (
-    <div className="tablediv">
+    <div className="tablediv" data-testid="tableDraft">
       <Searchbar filter={globalFilter} setFilter={setGlobalFilter} />
       <table {...getTableProps()}>
         <thead>

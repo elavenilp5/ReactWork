@@ -2,7 +2,7 @@ import React from "react"
 
 function BaselineFooter() {
   return (
-    <div className="footer">
+    <div className="footer" data-testid="footerBaseline">
       <button type="button" className="b1 button">
         Refresh
       </button>

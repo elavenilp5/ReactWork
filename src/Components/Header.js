@@ -2,7 +2,7 @@ import React from "react"
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown"
 export default function Header() {
   return (
-    <div className="headerdiv">
+    <div className="headerdiv" data-testid="head">
       <div className="logodiv">
         <img src="Bosch_logo.jpg" alt="logo" className="logoimg" />
       </div>
